@@ -48,7 +48,7 @@ jobs:
           if [ ${{ steps.install.outcome }} == failure ]; then
             sed -i 's/!\[Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Install-Failure-red.svg)/g' README.md
           else
-            sed -i 's/!\[Install\].*\.svg)/\!\[${{ matrix.python-version Install\](https:\/\/img.shields.io\/badge\/Install-Success-green.svg)/g' README.md
+            sed -i 's/!\[Install\].*\.svg)/\!\[${{ matrix.python-version }} Install\](https:\/\/img.shields.io\/badge\/Install-Success-green.svg)/g' README.md
           fi
           if [ ${{ steps.lint.outcome }} == failure ]; then
             sed -i 's/!\[Lint\].*\.svg)/\!\[Lint\](https:\/\/img.shields.io\/badge\/Lint-Failure-red.svg)/g' README.md

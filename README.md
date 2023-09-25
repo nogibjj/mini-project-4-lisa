@@ -23,7 +23,7 @@
 
 * Test across 4 different Python versions in the workflow using strategy-matrix
 * Create Badges for each GitHub Action for each version of Python
-  *Install is failing for Python 3.8 because Pandas 2.1.0 was not compatible with Python 3.8*
+*  *Install is failing for Python 3.8 because Pandas 2.1.0 was not compatible with Python 3.8*
 
 <img width="464" alt="Screenshot 2023-09-24 at 11 31 34 PM" src="https://github.com/nogibjj/mini-project-4-lisa/assets/46847817/f3968b4b-0e16-4075-9b12-d7d8231da779">
 

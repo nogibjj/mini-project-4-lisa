@@ -1,5 +1,5 @@
 
-![3.8Install](https://img.shields.io/badge/Python-3.8-Install-Failure-red.svg)
+![3.8Install](https://img.shields.io/badge/Python+3.8+Install-Failure-red.svg)
 ![3.8Lint](https://img.shields.io/badge/Install-Failure-red.svg)
 ![3.8Test](https://img.shields.io/badge/Install-Failure-red.svg)
 ![3.8Format](https://img.shields.io/badge/Install-Failure-red.svg)

@@ -5,9 +5,9 @@
 ![3.8Format](https://img.shields.io/badge/Python_3.8_Format-Failure-red.svg)
 
 ![3.9Install](https://img.shields.io/badge/Python_3.9_Install-Success-green.svg)
-![3.9Lint](https://img.shields.io/badge/Install-Failure-red.svg)
-![3.9Test](https://img.shields.io/badge/Install-Failure-red.svg)
-![3.9Format](https://img.shields.io/badge/Install-Failure-red.svg)
+![3.9Lint](https://img.shields.io/badge/Python_3.9_Lint-Failure-red.svg)
+![3.9Test](https://img.shields.io/badge/Python_3.9_Test-Failure-red.svg)
+![3.9Format](https://img.shields.io/badge/Python_3.9_Format-Success-green.svg)
 
 ![3.10.xInstall](https://img.shields.io/badge/Python_3.10.x_Install-Success-green.svg)
 ![3.10.xLint](https://img.shields.io/badge/Install-Failure-red.svg)

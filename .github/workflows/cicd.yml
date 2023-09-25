@@ -18,9 +18,65 @@ jobs:
       - uses: actions/checkout@v3
       - name: install packages
         run: make install
+        
       - name: lint
         run: make lint
+        
       - name: test
         run: make test
-      - name: format
+
+
+          - name: Install Packages
+        id: install
+        run: make install
+        continue-on-error: true
+
+      - name: Lint
+        id: lint
+        run: make lint
+        continue-on-error: true
+
+      - name: Test
+        id: test
+        run: make test
+        continue-on-error: true
+
+      - name: Format
+        id: format
         run: make format
+        continue-on-error: true
+
+      - name: Update Badges
+        id: update_badges
+        run: |
+          if [ ${{ steps.install.outcome }} == failure ]; then
+            sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Install-Failure-red.svg)/g' README.md
+          else
+            sed -i 's/!\[Install\].*\.svg)/\!\[Install\](https:\/\/img.shields.io\/badge\/Install-Success-green.svg)/g' README.md
+          fi
+          if [ ${{ steps.lint.outcome }} == failure ]; then
+            sed -i 's/!\[Lint\].*\.svg)/\!\[Lint\](https:\/\/img.shields.io\/badge\/Lint-Failure-red.svg)/g' README.md
+          else
+            sed -i 's/!\[Lint\].*\.svg)/\!\[Lint\](https:\/\/img.shields.io\/badge\/Lint-Success-green.svg)/g' README.md
+          fi
+          if [ ${{ steps.test.outcome }} == failure ]; then
+            sed -i 's/!\[Test\].*\.svg)/\!\[Test\](https:\/\/img.shields.io\/badge\/Test-Failure-red.svg)/g' README.md
+          else
+            sed -i 's/!\[Test\].*\.svg)/\!\[Test\](https:\/\/img.shields.io\/badge\/Test-Success-green.svg)/g' README.md
+          fi
+          if [ ${{ steps.format.outcome }} == failure ]; then
+            sed -i 's/!\[Format\].*\.svg)/\!\[Format\](https:\/\/img.shields.io\/badge\/Format-Failure-red.svg)/g' README.md
+          else
+            sed -i 's/!\[Format\].*\.svg)/\!\[Format\](https:\/\/img.shields.io\/badge\/Format-Success-green.svg)/g' README.md
+          fi
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action";
+          git add README.md
+          git commit -am "Updte README.md"
+          git push
+        continue-on-error: true
+
+
+    
+
+      

@@ -49,9 +49,9 @@ jobs:
           git config --local user.name "GitHub Action"
           git pull
           if [ ${{ steps.install.outcome }} == failure ]; then
-            sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Python+${{ matrix.python-version }}+Install-Failure-red.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Python ${{ matrix.python-version }} Install-Failure-red.svg)/g' README.md
           else
-            sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Python+${{ matrix.python-version }}+Install-Success-green.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Install-Success-green.svg)/g' README.md
           fi
           if [ ${{ steps.lint.outcome }} == failure ]; then
             sed -i 's/!\[Lint\].*\.svg)/\!\[Lint\](https:\/\/img.shields.io\/badge\/Lint-Failure-red.svg)/g' README.md

@@ -14,7 +14,7 @@
 ![3.10.xTest](https://img.shields.io/badge/Install-Failure-red.svg)
 ![3.10.xFormat](https://img.shields.io/badge/Install-Failure-red.svg)
 
-![3.11Install](https://img.shields.io/badge/Python-3.11-Install-Success-green.svg)
+![3.11Install](https://img.shields.io/badge/Python+3.11+Install-Success-green.svg)
 ![3.11Lint](https://img.shields.io/badge/Install-Failure-red.svg)
 ![3.11Test](https://img.shields.io/badge/Install-Failure-red.svg)
 ![3.11Format](https://img.shields.io/badge/Install-Failure-red.svg)

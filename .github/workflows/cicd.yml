@@ -49,24 +49,24 @@ jobs:
           git config --local user.name "GitHub Action"
           git pull
           if [ ${{ steps.install.outcome }} == failure ]; then
-            sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Python ${{ matrix.python-version }} Install-Failure-red.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Install-Failure-red.svg)/g' README.md
           else
             sed -i 's/!\[${{ matrix.python-version }}Install\].*\.svg)/\!\[${{ matrix.python-version }}Install\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Install-Success-green.svg)/g' README.md
           fi
           if [ ${{ steps.lint.outcome }} == failure ]; then
-            sed -i 's/!\[Lint\].*\.svg)/\!\[Lint\](https:\/\/img.shields.io\/badge\/Lint-Failure-red.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Lint\].*\.svg)/\!\[${{ matrix.python-version }}Lint\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Lint-Failure-red.svg)/g' README.md
           else
-            sed -i 's/!\[Lint\].*\.svg)/\!\[Lint\](https:\/\/img.shields.io\/badge\/Lint-Success-green.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Lint\].*\.svg)/\!\[${{ matrix.python-version }}Lint\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Lint-Success-green.svg)/g' README.md
           fi
           if [ ${{ steps.test.outcome }} == failure ]; then
-            sed -i 's/!\[Test\].*\.svg)/\!\[Test\](https:\/\/img.shields.io\/badge\/Test-Failure-red.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Test\].*\.svg)/\!\[${{ matrix.python-version }}Test\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Test-Failure-red.svg)/g' README.md
           else
-            sed -i 's/!\[Test\].*\.svg)/\!\[Test\](https:\/\/img.shields.io\/badge\/Test-Success-green.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Test\].*\.svg)/\!\[${{ matrix.python-version }}Test\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Test-Success-green.svg)/g' README.md
           fi
           if [ ${{ steps.format.outcome }} == failure ]; then
-            sed -i 's/!\[Format\].*\.svg)/\!\[Format\](https:\/\/img.shields.io\/badge\/Format-Failure-red.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Format\].*\.svg)/\!\[${{ matrix.python-version }}Format\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Format-Failure-red.svg)/g' README.md
           else
-            sed -i 's/!\[Format\].*\.svg)/\!\[Format\](https:\/\/img.shields.io\/badge\/Format-Success-green.svg)/g' README.md
+            sed -i 's/!\[${{ matrix.python-version }}Format\].*\.svg)/\!\[${{ matrix.python-version }}Format\](https:\/\/img.shields.io\/badge\/Python_${{ matrix.python-version }}_Format-Success-green.svg)/g' README.md
           fi
           git add README.md
           git commit -am "Updte README.md"

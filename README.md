@@ -1,6 +1,6 @@
 [![CI](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml)
 
-![Install](https://img.shields.io/badge/Install-Success-green.svg)
+![3.8Install](https://img.shields.io/badge/Install-Failure-red.svg)
 
 
 ## Template for Python Projects 

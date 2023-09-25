@@ -19,7 +19,7 @@
 ![3.11Test](https://img.shields.io/badge/Python_3.11_Test-Failure-red.svg)
 ![3.11Format](https://img.shields.io/badge/Python_3.11_Format-Success-green.svg)
 
-** GitHub Actions Matrix Build for Multiple Python Versions
+## GitHub Actions Matrix Build for Multiple Python Versions
 
 * Test across 4 different Python versions in the workflow using strategy-matrix
 * Create Badges for each GitHub Action for each version of Python
@@ -29,7 +29,7 @@
 
 
 
-*** Next Step:
+### Next Step:
 * Using Matrix to test for different operating systems
 * Utilize customized GitHub Actions in Marketplace, such as [RubbaBoy/BYOB@v1.3.0](https://github.com/RubbaBoy/BYOB),  to simplify the work on updating badges.
 
